@@ -10,7 +10,7 @@ MCP helps you build agents and complex workflows on top of LLMs. LLMs frequently
 - The flexibility to switch between LLM providers and vendors
 - Best practices for securing your data within your infrastructure
 ```
-![mcp](./images/whatismcp.png)
+<div><img src="./images/whatismcp.png" style="display: block; margin: auto; width: 40%"/></div>
 
 ### MCP Tools
 ```text
