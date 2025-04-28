@@ -111,3 +111,13 @@ export function request_chat(msgs: ChatMessageRequestMessage[]): Promise<ChatMes
     })
   })
 }
+
+export function send_message(msg: string, role: 'user' | 'assistant'| 'system'  = 'user'): Promise<ChatMessageResponse> {
+  const msgs = [
+    {
+      role: role,
+      content: msg
+    }
+  ]
+  return request_chat(msgs)
+}

@@ -58,5 +58,23 @@ export const ToolDefines: ToolSchema[] = [
         ]
       }
     }
+  },
+  {
+    name: "ds_message",
+    description: 'forward message to deepseek chat api.',
+    paramSchema: {
+      message: z.string() 
+    },
+    cb: async (args) => {
+      const resp = await ds.send_message(args.message)
+      return {
+        content: [
+          {
+            type: 'text',
+            text: resp.choices[0].message.content
+          }
+        ]
+      }
+    }
   }
 ]

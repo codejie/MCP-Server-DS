@@ -52,8 +52,8 @@ app.post('/messages', async (req, res) => {
   }
 })
  
-app.listen(3000, () => {
-  console.log('listening on http://localhost:3000');
+app.listen(3123, () => {
+  console.log('listening on http://0.0.0.0:3123');
 });
 
 process.on('SIGINT', async () => {
